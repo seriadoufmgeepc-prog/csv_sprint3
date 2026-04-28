@@ -36,12 +36,14 @@ try:
     from ui.summary_tab import render_summary_tab as render_summary_tab_v6
     from ui.export_tab import render_export_tab as render_export_tab_v6
     from ui.conrestcon_tab import render_conrestcon_tab as render_conrestcon_tab_v6
+    from ui.homologation_tab import render_homologation_tab as render_homologation_tab_v6
 except ModuleNotFoundError:
     render_import_tab_v6 = None
     render_edit_tab_v6 = None
     render_summary_tab_v6 = None
     render_export_tab_v6 = None
     render_conrestcon_tab_v6 = None
+    render_homologation_tab_v6 = None
 
 from pypdf import PdfReader
 

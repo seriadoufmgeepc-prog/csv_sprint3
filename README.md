@@ -305,3 +305,7 @@ streamlit run app.py
 
 ## v6.0 - Sprint 6
 - modo modular consolidado com exportações CSV/Excel, validação e memória de alterações.
+
+
+## v6.0 - Sprint 7
+- etapa de homologação funcional iniciada, com checklist, comparação e aba dedicada no modo modular.
