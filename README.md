@@ -295,3 +295,9 @@ streamlit run app.py
 ## v6.0 - Sprint 4
 - interface modular inicial conectada aos serviços;
 - novo modo de interface ativável por toggle, preservando fallback no fluxo legado.
+
+
+## v6.0 - Sprint 5
+- integração modular da CONRESTCON;
+- memória de alterações conectada à interface;
+- filtros, padronização por restrição e exportação modular ampliados.
