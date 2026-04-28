@@ -301,3 +301,7 @@ streamlit run app.py
 - integração modular da CONRESTCON;
 - memória de alterações conectada à interface;
 - filtros, padronização por restrição e exportação modular ampliados.
+
+
+## v6.0 - Sprint 6
+- modo modular consolidado com exportações CSV/Excel, validação e memória de alterações.

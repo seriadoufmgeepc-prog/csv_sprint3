@@ -2054,7 +2054,7 @@ permitir_alerta_campos_vazios = st.sidebar.checkbox("Alertar motivo/providência
 
 render_sprint_banner()
 
-modo_modular_v6 = st.toggle("Usar interface modular da v6.0 (Sprint 4)", value=True)
+modo_modular_v6 = st.toggle("Usar interface modular da v6.0 (Sprint 6)", value=True)
 
 
 if modo_modular_v6 and all([render_import_tab_v6, render_edit_tab_v6, render_summary_tab_v6, render_export_tab_v6, render_conrestcon_tab_v6]):
