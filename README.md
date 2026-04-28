@@ -290,3 +290,8 @@ streamlit run app.py
 ## v6.0 - Sprint 3
 - serviços de padronização, validação, resumo e auditoria iniciados;
 - base pronta para migração gradual da interface na Sprint 4.
+
+
+## v6.0 - Sprint 4
+- interface modular inicial conectada aos serviços;
+- novo modo de interface ativável por toggle, preservando fallback no fluxo legado.

@@ -28,7 +28,20 @@ try:
     from ui.components import render_sprint_banner
 except ModuleNotFoundError:
     def render_sprint_banner():
-        st.info("v6.0 - Sprint 1 iniciada: estrutura modular criada e base estável preservada.")
+        st.info("v6.0 - Sprint 4: interface em migração para os serviços modulares.")
+
+try:
+    from ui.import_tab import render_import_tab as render_import_tab_v6
+    from ui.edit_tab import render_edit_tab as render_edit_tab_v6
+    from ui.summary_tab import render_summary_tab as render_summary_tab_v6
+    from ui.export_tab import render_export_tab as render_export_tab_v6
+    from ui.conrestcon_tab import render_conrestcon_tab as render_conrestcon_tab_v6
+except ModuleNotFoundError:
+    render_import_tab_v6 = None
+    render_edit_tab_v6 = None
+    render_summary_tab_v6 = None
+    render_export_tab_v6 = None
+    render_conrestcon_tab_v6 = None
 
 from pypdf import PdfReader
 
@@ -2040,6 +2053,23 @@ bloquear_duplicidades = st.sidebar.checkbox("Bloquear duplicidade UG + restriç�
 permitir_alerta_campos_vazios = st.sidebar.checkbox("Alertar motivo/providência vazios", value=True)
 
 render_sprint_banner()
+
+modo_modular_v6 = st.toggle("Usar interface modular da v6.0 (Sprint 4)", value=True)
+
+
+if modo_modular_v6 and all([render_import_tab_v6, render_edit_tab_v6, render_summary_tab_v6, render_export_tab_v6, render_conrestcon_tab_v6]):
+    tabs = st.tabs(["📥 Importação", "🛠️ Conferência e Edição", "📊 Resumo por UG", "📤 Exportação", "📚 CONRESTCON"])
+    with tabs[0]:
+        render_import_tab_v6()
+    with tabs[1]:
+        render_edit_tab_v6()
+    with tabs[2]:
+        render_summary_tab_v6()
+    with tabs[3]:
+        render_export_tab_v6()
+    with tabs[4]:
+        render_conrestcon_tab_v6()
+    st.stop()
 
 tabs = st.tabs(["📥 Importação", "🛠️ Conferência e Edição", "📊 Resumo por UG", "📤 Exportação", "📚 CONRESTCON"])
 
